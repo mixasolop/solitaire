@@ -18,7 +18,7 @@
     <ClCompile Include="Card.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Deck.cpp">
+    <ClCompile Include="Stock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Pile.cpp">
@@ -27,15 +27,21 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Waste.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Deck.h">
+    <ClInclude Include="Stock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Pile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Waste.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

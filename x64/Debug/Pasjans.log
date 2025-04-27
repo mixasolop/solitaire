@@ -1,5 +1,5 @@
-﻿  Deck.cpp
-D:\code\projects\Pasjans\Pasjans\Deck.cpp(26,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  Stock.cpp
+D:\code\projects\Pasjans\Pasjans\Stock.cpp(18,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Game.cpp
   Generating Code...
   Pasjans.vcxproj -> D:\code\projects\Pasjans\x64\Debug\Pasjans.exe

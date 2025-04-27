@@ -21,6 +21,11 @@ string Card::fixValue(int _value) const
 	return "error";
 }
 
+Card::Card() :suit(), value()
+{
+	is_faceUp = false;
+}
+
 ostream& operator<<(std::ostream& out, const Card& card)
 {
 	if (card.suit == Hearts || card.suit == Diamonds) {

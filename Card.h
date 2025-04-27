@@ -13,6 +13,8 @@ private:
 	bool is_faceUp;
 public:
 	string fixValue(int _value) const;
+	Card();
 	Card(Color _suit, int _value, bool _is_faceUp = false);
+	void setFaceUp(bool isUp) { is_faceUp = isUp; };
 	friend ostream& operator<<(std::ostream& out, const Card& card);
 };

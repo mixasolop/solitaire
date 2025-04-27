@@ -1,8 +1,9 @@
 #pragma once
 #include "string.h"
 #include "Card.h"
-#include "Deck.h"
-#include <windows.h>
+#include "Stock.h"
+#include "Waste.h"
+#include "Pile.h"
 #include <iostream>
 using namespace std;
 
@@ -28,7 +29,15 @@ using namespace std;
 
 
 int main() {
-	Deck deck;
-	deck.shuffle();
-	cout << deck;
+	Stock stock;
+	Waste waste;
+	cout << "\n --------------STOCK-------------- \n";
+	cout << stock;
+	cout << "\n --------------WASTE-------------- \n";
+	cout << waste;
+	stock.draw_card(waste);
+	cout << "\n --------------STOCK-------------- \n";
+	cout << stock;
+	cout << "\n --------------WASTE-------------- \n";
+	cout << waste;
 }
