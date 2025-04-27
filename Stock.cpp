@@ -1,13 +1,13 @@
 ﻿#include "Stock.h"
 
-Color suit[4] = {Hearts, Diamonds, Spades, Clubs};
+Suit suit[4] = {Hearts, Diamonds, Spades, Clubs};
 
 Stock::Stock(bool _is_hard_mode): Pile()
 {
 	isHardMode = _is_hard_mode;
 	for (int i = 0; i < 4; i++) {
 		for (int j = 2; j <= 14; j++) {
-			cards.push_back(Card(suit[i], j));
+			cards.push_back(Card(suit[i], j, false));
 		}
 	}
 	shuffle();
@@ -15,9 +15,8 @@ Stock::Stock(bool _is_hard_mode): Pile()
 
 void Stock::shuffle()
 {
-	srand(time(0));
-	for (int i = 0; i < 52; i++) {
-		int j = rand() % 52;
+	for (int i = 0; i < capacity; i++) {
+		int j = rand() % capacity;
 
 		Card temp = cards[i];
 		cards[i] = cards[j];
@@ -43,4 +42,15 @@ void Stock::draw_card(Pile& waste)
 		}
 		this->shuffle();
 	}
+}
+
+void Stock::draw_collumn(Pile& waste)
+{
+	capacity--;
+	Card c = this->pop();
+	c.setFaceUp(true);
+	if (!waste.empty()){
+		waste.top().setFaceUp(false);
+}
+	waste.push(c);
 }

@@ -4,17 +4,20 @@
 using namespace std;
 
 
-enum Color { Hearts, Diamonds, Spades, Clubs };
+enum Suit { Hearts, Diamonds, Spades, Clubs };
 
 class Card {
-private:
-	Color suit;
+protected:
+	Suit suit;
 	int value;
 	bool is_faceUp;
 public:
 	string fixValue(int _value) const;
 	Card();
-	Card(Color _suit, int _value, bool _is_faceUp = false);
-	void setFaceUp(bool isUp) { is_faceUp = isUp; };
-	friend ostream& operator<<(std::ostream& out, const Card& card);
+	Card(Suit _suit, int _value, bool _is_faceUp = false);
+	void setFaceUp(bool isUp);
+	Suit GetSuit() { return suit; };
+	Suit GetSuit() const { return suit; };
+	int Getvalue() const { return value; };
+	friend std::ostream& operator<<(std::ostream& out, const Card& card);
 };

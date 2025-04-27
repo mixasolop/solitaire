@@ -27,9 +27,9 @@ Card Pile::pop()
 	}
 }
 
-const Card& Pile::top() const
+Card& Pile::top()
 {
-	return cards.front();
+	return cards.back();
 }
 
 ostream& operator<<(std::ostream& out, const Pile& pile)

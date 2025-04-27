@@ -30,6 +30,9 @@
     <ClCompile Include="Waste.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Column.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Waste.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Column.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

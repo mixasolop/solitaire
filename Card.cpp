@@ -1,7 +1,12 @@
 ﻿#include "Card.h"
 
-Card::Card(Color _suit, int _value, bool _is_faceUp) : suit(_suit), value(_value), is_faceUp(_is_faceUp)
+Card::Card(Suit _suit, int _value, bool _is_faceUp) : suit(_suit), value(_value), is_faceUp(_is_faceUp)
 {
+}
+
+void Card::setFaceUp(bool isUp)
+{
+	is_faceUp = isUp;
 }
 
 string Card::fixValue(int _value) const
@@ -28,6 +33,10 @@ Card::Card() :suit(), value()
 
 ostream& operator<<(std::ostream& out, const Card& card)
 {
+	if (card.is_faceUp == false) {
+		out << "??";
+		return out;
+	}
 	if (card.suit == Hearts || card.suit == Diamonds) {
 		out << "\033[1;31;40m";
 	}

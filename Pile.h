@@ -14,7 +14,7 @@ public:
     virtual bool canAccept(const Card& c) const = 0;   // “legal move?” rule
     virtual void   push(const Card& c);                // add a card
     virtual Card   pop();                               // remove & return top
-    virtual const Card& top() const;                   // peek top
+    virtual Card& top();                   // peek top
     virtual bool   empty() const { return cards.empty(); };      // is it empty?
     virtual size_t size() const { return cards.size(); };      // how many cards?
     virtual ~Pile() {};

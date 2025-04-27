@@ -11,5 +11,6 @@ public:
 	Stock(bool _is_hard_mode = false);
 	void shuffle();
 	void draw_card(Pile& waste);
+	void draw_collumn(Pile& waste);
 	virtual bool canAccept(const Card& c) const override { return false; };
 };
